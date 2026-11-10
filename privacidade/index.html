@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Política de Privacidade do ViaZapi e instruções para exclusão de dados.">
+<link rel="canonical" href="https://viazapi.com/privacidade/">
+<meta property="og:title" content="ViaZapi"><meta property="og:description" content="Política de Privacidade do ViaZapi e instruções para exclusão de dados."><meta property="og:url" content="https://viazapi.com/privacidade/"><meta property="og:image" content="https://viazapi.com/og-image.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>ViaZapi Privacidade</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Schibsted+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: documento legal em coluna única de leitura, com índice lateral fixo no desktop */
+:root{
+  --bg:#F2F5F3; --surface:#FFFFFF; --ink:#0F1D18; --muted:#55655E; --line:#D7E0DA;
+  --accent:#0A7F55; --accent-soft:#DDF1E7; --accent-ink:#FFFFFF; --signal:#D9822B; --flag:#FFF1DC; --flag-ink:#8A4B0C;
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --body:"Schibsted Grotesk","Segoe UI",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0B1310; --surface:#121E19; --ink:#E4EDE8; --muted:#94A69D; --line:#22332B;
+  --accent:#34C389; --accent-soft:#163A2A; --accent-ink:#04130C; --signal:#F0A456; --flag:#3A2A12; --flag-ink:#F5C58A;
+  color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#0B1310; --surface:#121E19; --ink:#E4EDE8; --muted:#94A69D; --line:#22332B;
+  --accent:#34C389; --accent-soft:#163A2A; --accent-ink:#04130C; --signal:#F0A456; --flag:#3A2A12; --flag-ink:#F5C58A;
+  color-scheme:dark;}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font:400 16.5px/1.7 var(--body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--surface)}
+a{color:var(--accent)}
+a:focus-visible{outline:2.5px solid var(--signal);outline-offset:2px}
+.wrap{max-width:1100px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header.top{background:var(--surface);border-bottom:1px solid var(--line);position:sticky;top:env(safe-area-inset-top,0px);z-index:50}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+.logo{display:flex;align-items:center;gap:9px;font:800 19px/1 var(--display);letter-spacing:-.03em;text-decoration:none;color:var(--ink)}
+.logo b{color:var(--accent)}
+.logo svg{width:26px;height:26px}
+.nav nav{display:flex;gap:18px;font-size:14.5px}
+.nav nav a{color:var(--muted);text-decoration:none}.nav nav a:hover{color:var(--ink)}
+.intro{padding-block:56px 36px;border-bottom:1px solid var(--line)}
+.eyebrow{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+h1{font:800 clamp(36px,5.5vw,58px)/1.04 var(--display);letter-spacing:-.025em;margin:12px 0 0;text-wrap:balance}
+.intro p{color:var(--muted);font-size:18px;max-width:42em;margin:18px 0 0}
+.meta{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:22px;font:400 13px var(--mono);color:var(--muted)}
+.layout{display:grid;grid-template-columns:240px minmax(0,1fr);gap:56px;padding-block:44px 80px}
+.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 84px);align-self:start;font-size:14px}
+.toc strong{display:block;font:500 11.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:7px;counter-reset:t}
+.toc li{counter-increment:t;display:grid;grid-template-columns:26px 1fr}
+.toc li::before{content:counter(t,decimal-leading-zero);font:400 12px/1.9 var(--mono);color:var(--muted)}
+.toc a{color:var(--ink);text-decoration:none}.toc a:hover{color:var(--accent)}
+@media (max-width:860px){.layout{grid-template-columns:1fr;gap:28px}.toc{position:static;border:1px solid var(--line);border-radius:12px;padding:16px;background:var(--surface)}}
+article{max-width:70ch;counter-reset:sec}
+article section{scroll-margin-top:84px;padding-bottom:12px}
+article h2{font:700 25px/1.2 var(--display);letter-spacing:-.015em;margin:40px 0 12px;counter-increment:sec;display:flex;gap:12px;text-wrap:balance}
+article h2::before{content:counter(sec);font:500 13px/2.1 var(--mono);color:var(--accent);min-width:22px}
+article section:first-child h2{margin-top:0}
+article h3{font:600 17px/1.4 var(--body);margin:22px 0 6px}
+article p,article li{color:var(--ink)}
+article p{margin:0 0 14px}
+article ul{margin:0 0 16px;padding-left:20px;display:grid;gap:6px}
+article li::marker{color:var(--accent)}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:18px 0}
+.box.del{border:2px solid var(--accent)}
+.box ol{margin:8px 0 0;padding-left:20px;display:grid;gap:6px}
+.tbl{overflow-x:auto;margin:14px 0 18px;border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:15px;background:var(--surface)}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 12px var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+tr:last-child td{border-bottom:0}
+.pend{background:var(--flag);color:var(--flag-ink);font:500 .88em var(--mono);padding:1px 6px;border-radius:5px;white-space:nowrap}
+code{font:500 .9em var(--mono)}
+footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap nav">
+    <a class="logo" href="/" aria-label="ViaZapi, página inicial">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 9l8 14 8-14" fill="none" stroke="var(--accent-ink)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="9" r="2.6" fill="var(--signal)"/></svg>
+      <span>Via<b>Zapi</b></span>
+    </a>
+    <nav><a href="/">Site</a><a href="#privacidade">Privacidade</a><a href="#exclusao-de-dados">Exclusão de dados</a><a href="#contato">Contato</a></nav>
+  </div>
+</header>
+
+<main id="topo">
+  <div class="wrap intro" id="privacidade">
+    <span class="eyebrow">Documento legal</span>
+    <h1>Política de Privacidade</h1>
+    <p>Esta política explica quais dados pessoais o ViaZapi coleta, como usa, com quem compartilha e como você pode exercer seus direitos, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018, LGPD) e com as políticas da Meta para a Plataforma WhatsApp Business.</p>
+    <div class="meta"><span>Vigente desde 6 de novembro de 2026</span><span>Versão 1.0</span></div>
+  </div>
+
+  <div class="wrap layout">
+    <aside class="toc" aria-label="Índice">
+      <strong>Nesta página</strong>
+      <ol>
+        <li><a href="#quem-somos">Quem somos</a></li>
+        <li><a href="#papeis">Controlador e operador</a></li>
+        <li><a href="#dados">Dados que coletamos</a></li>
+        <li><a href="#finalidades">Como usamos os dados</a></li>
+        <li><a href="#compartilhamento">Compartilhamento</a></li>
+        <li><a href="#internacional">Transferência internacional</a></li>
+        <li><a href="#retencao">Tempo de guarda</a></li>
+        <li><a href="#seguranca">Segurança</a></li>
+        <li><a href="#direitos">Seus direitos</a></li>
+        <li><a href="#exclusao-de-dados">Exclusão de dados</a></li>
+        <li><a href="#cookies">Cookies</a></li>
+        <li><a href="#menores">Menores de idade</a></li>
+        <li><a href="#alteracoes">Alterações</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ol>
+    </aside>
+
+    <article>
+      <section id="quem-somos">
+        <h2>Quem somos</h2>
+        <p>O ViaZapi é uma plataforma de comunicação por WhatsApp para empresas, com multiatendimento, envio de campanhas e integração via API. O ViaZapi é operado por M E R Assessoria Marketing e Vendas Ltda., inscrita no CNPJ sob o nº 47.804.038/0001-80, com sede em Av. Governador Antônio da Silva Mariz, 1669, Sala 209, Portal do Sol, João Pessoa/PB, CEP 58046-518 ("ViaZapi", "nós").</p>
+        <p>Esta política se aplica ao site, ao painel do ViaZapi, à API e a qualquer conversa de WhatsApp conduzida por meio da plataforma.</p>
+      </section>
+
+      <section id="papeis">
+        <h2>Controlador e operador</h2>
+        <p>Atuamos em dois papéis diferentes, conforme a LGPD:</p>
+        <ul>
+          <li><strong>Como controlador:</strong> para os dados das empresas clientes e de seus usuários do painel (nome, e-mail, telefone, dados de cobrança), e para os dados de visitantes do site e de quem fala com o nosso próprio atendimento.</li>
+          <li><strong>Como operador:</strong> para os dados dos contatos que as empresas clientes atendem pelo ViaZapi (os clientes finais delas). Nesse caso, a empresa cliente é a controladora, decide como esses dados são usados e é responsável por ter base legal para o envio de mensagens. Nós tratamos esses dados apenas para prestar o serviço, conforme as instruções da empresa cliente.</li>
+        </ul>
+        <p>Se você recebeu uma mensagem de uma empresa que usa o ViaZapi e quer exercer seus direitos, o ideal é falar diretamente com essa empresa. Também podemos encaminhar o seu pedido a ela.</p>
+      </section>
+
+      <section id="dados">
+        <h2>Dados que coletamos</h2>
+        <div class="tbl"><table>
+          <thead><tr><th>Categoria</th><th>Exemplos</th><th>Origem</th></tr></thead>
+          <tbody>
+            <tr><td>Cadastro e conta</td><td>Nome, e-mail, telefone, empresa, cargo, senha (armazenada de forma criptografada)</td><td>Fornecidos por você</td></tr>
+            <tr><td>Cobrança</td><td>CNPJ ou CPF, endereço de cobrança, histórico de pagamentos</td><td>Fornecidos por você e pelo processador de pagamento</td></tr>
+            <tr><td>Dados do WhatsApp</td><td>Número de telefone, nome de perfil, conteúdo de mensagens e mídias, data, hora e status de entrega e leitura</td><td>Plataforma WhatsApp Business (Meta) e uso do serviço</td></tr>
+            <tr><td>Contatos importados</td><td>Listas de contatos, etiquetas e variáveis de campanha enviadas pela empresa cliente</td><td>Empresa cliente</td></tr>
+            <tr><td>Uso e dispositivo</td><td>Endereço IP, navegador, páginas acessadas, registros de acesso (logs)</td><td>Coleta automática</td></tr>
+            <tr><td>Formulários do site</td><td>Nome, empresa, WhatsApp e mensagem enviados em pedidos de demonstração</td><td>Fornecidos por você</td></tr>
+          </tbody>
+        </table></div>
+        <p>Não solicitamos dados pessoais sensíveis. Se eles forem enviados em uma conversa, serão tratados apenas para prestar o serviço e protegidos com o mesmo nível de segurança.</p>
+      </section>
+
+      <section id="finalidades">
+        <h2>Como usamos os dados</h2>
+        <div class="tbl"><table>
+          <thead><tr><th>Finalidade</th><th>Base legal (LGPD, art. 7º)</th></tr></thead>
+          <tbody>
+            <tr><td>Criar e manter contas, prestar o serviço de atendimento, campanhas e API</td><td>Execução de contrato (V)</td></tr>
+            <tr><td>Enviar e receber mensagens pela Plataforma WhatsApp Business em nome da empresa cliente</td><td>Execução de contrato (V), conforme instruções do controlador</td></tr>
+            <tr><td>Cobrança, emissão de notas fiscais e obrigações fiscais</td><td>Obrigação legal (II) e execução de contrato (V)</td></tr>
+            <tr><td>Guardar registros de acesso pelo prazo do Marco Civil da Internet</td><td>Obrigação legal (II)</td></tr>
+            <tr><td>Segurança, prevenção a fraudes e abuso, e cumprimento das políticas da Meta</td><td>Legítimo interesse (IX)</td></tr>
+            <tr><td>Melhorar o produto e gerar estatísticas agregadas</td><td>Legítimo interesse (IX)</td></tr>
+            <tr><td>Responder pedidos de contato e enviar comunicações comerciais</td><td>Consentimento (I) ou legítimo interesse (IX), com opção de descadastro</td></tr>
+          </tbody>
+        </table></div>
+        <p>Não vendemos dados pessoais. Não usamos o conteúdo das conversas dos clientes finais para publicidade própria nem para treinar modelos de terceiros.</p>
+      </section>
+
+      <section id="compartilhamento">
+        <h2>Compartilhamento</h2>
+        <p>Compartilhamos dados apenas quando necessário para prestar o serviço:</p>
+        <ul>
+          <li><strong>Meta Platforms (WhatsApp):</strong> para entregar e receber mensagens pela Plataforma WhatsApp Business. O tratamento pela Meta segue a <a href="https://www.whatsapp.com/legal/business-policy" rel="noopener" target="_blank">Política Comercial do WhatsApp</a> e a <a href="https://www.facebook.com/privacy/policy" rel="noopener" target="_blank">Política de Privacidade da Meta</a>.</li>
+          <li><strong>Provedores de infraestrutura:</strong> hospedagem em nuvem, banco de dados, envio de e-mail e monitoramento, sob contrato e com obrigação de confidencialidade.</li>
+          <li><strong>Processadores de pagamento:</strong> para cobrança das assinaturas.</li>
+          <li><strong>Empresa cliente:</strong> os dados das conversas ficam disponíveis para a empresa que conduz o atendimento.</li>
+          <li><strong>Autoridades:</strong> quando exigido por lei, ordem judicial ou requisição de autoridade competente.</li>
+        </ul>
+      </section>
+
+      <section id="internacional">
+        <h2>Transferência internacional</h2>
+        <p>Alguns provedores, incluindo a Meta, podem armazenar ou processar dados fora do Brasil. Nesses casos, adotamos as salvaguardas previstas no art. 33 da LGPD, como cláusulas contratuais e a contratação de fornecedores com padrões de proteção adequados.</p>
+      </section>
+
+      <section id="retencao">
+        <h2>Tempo de guarda</h2>
+        <ul>
+          <li><strong>Dados de conta e cobrança:</strong> enquanto a conta estiver ativa e, depois, pelo prazo exigido pela legislação fiscal e para defesa em processos.</li>
+          <li><strong>Conversas e mídias:</strong> enquanto a empresa cliente mantiver a conta ativa, ou até que ela as exclua. Após o cancelamento, são excluídas em até 90 dias.</li>
+          <li><strong>Registros de acesso:</strong> 6 meses, conforme o Marco Civil da Internet (Lei nº 12.965/2014).</li>
+          <li><strong>Formulários do site:</strong> até 24 meses após o último contato, ou até o pedido de exclusão.</li>
+        </ul>
+      </section>
+
+      <section id="seguranca">
+        <h2>Segurança</h2>
+        <p>Usamos criptografia em trânsito (HTTPS/TLS), controle de acesso por perfil, senhas armazenadas com hash, tokens de API individuais e registros de auditoria. Nenhum sistema é totalmente imune a incidentes. Se ocorrer um incidente com risco relevante aos titulares, comunicaremos os afetados e a Autoridade Nacional de Proteção de Dados (ANPD), conforme a lei.</p>
+      </section>
+
+      <section id="direitos">
+        <h2>Seus direitos</h2>
+        <p>Pelo art. 18 da LGPD, você pode solicitar a qualquer momento:</p>
+        <ul>
+          <li>confirmação de que tratamos seus dados e acesso a eles;</li>
+          <li>correção de dados incompletos, inexatos ou desatualizados;</li>
+          <li>anonimização, bloqueio ou eliminação de dados desnecessários ou tratados em desconformidade;</li>
+          <li>portabilidade dos dados a outro fornecedor;</li>
+          <li>eliminação dos dados tratados com base no consentimento, e revogação desse consentimento;</li>
+          <li>informação sobre com quem compartilhamos seus dados;</li>
+          <li>revisão de decisões tomadas unicamente com base em tratamento automatizado.</li>
+        </ul>
+        <p>Respondemos em até 15 dias. Você também pode apresentar reclamação à ANPD em <a href="https://www.gov.br/anpd" rel="noopener" target="_blank">gov.br/anpd</a>.</p>
+      </section>
+
+      <section id="exclusao-de-dados">
+        <h2>Exclusão de dados</h2>
+        <div class="box del">
+          <p><strong>Como pedir a exclusão dos seus dados</strong></p>
+          <ol>
+            <li>Envie um e-mail para <a href="mailto:ricardo@viazapi.com">ricardo@viazapi.com</a> com o assunto <code>Exclusão de dados</code>.</li>
+            <li>Informe seu nome e o número de WhatsApp ou e-mail associado aos dados.</li>
+            <li>Se for cliente do ViaZapi, envie o pedido a partir do e-mail cadastrado na conta.</li>
+            <li>Confirmamos o recebimento em até 2 dias úteis e concluímos a exclusão em até 15 dias, informando o resultado por e-mail.</li>
+          </ol>
+        </div>
+        <p>Alguns dados podem ser mantidos depois do pedido, apenas quando a lei exige (por exemplo, registros fiscais e registros de acesso). Nesse caso, explicamos quais dados foram mantidos e por quanto tempo.</p>
+        <p>Se os seus dados foram tratados por uma empresa cliente do ViaZapi, encaminhamos o pedido a ela, que é a controladora, e apoiamos a execução da exclusão na plataforma.</p>
+      </section>
+
+      <section id="cookies">
+        <h2>Cookies</h2>
+        <p>O site e o painel usam cookies essenciais para login e segurança e, quando autorizados, cookies de medição de audiência. Você pode bloquear ou apagar cookies nas configurações do navegador. Bloquear os essenciais pode impedir o funcionamento do painel.</p>
+      </section>
+
+      <section id="menores">
+        <h2>Menores de idade</h2>
+        <p>O ViaZapi é destinado a empresas e não é direcionado a menores de 18 anos. Não coletamos intencionalmente dados de crianças e adolescentes para os nossos próprios fins.</p>
+      </section>
+
+      <section id="alteracoes">
+        <h2>Alterações</h2>
+        <p>Podemos atualizar esta política. A data de vigência no topo da página sempre indica a versão atual. Mudanças relevantes serão avisadas aos clientes por e-mail ou pelo painel.</p>
+      </section>
+
+      <section id="contato">
+        <h2>Contato e encarregado</h2>
+        <div class="box">
+          <p style="margin:0"><strong>Encarregado pelo tratamento de dados (DPO):</strong> Ricardo Lucas Cesar Moraes<br>
+          <strong>E-mail:</strong> <a href="mailto:ricardo@viazapi.com">ricardo@viazapi.com</a><br>
+          <strong>Empresa:</strong> M E R Assessoria Marketing e Vendas Ltda., CNPJ 47.804.038/0001-80<br>
+          <strong>Endereço:</strong> Av. Governador Antônio da Silva Mariz, 1669, Sala 209, Portal do Sol, João Pessoa/PB, CEP 58046-518</p>
+        </div>
+      </section>
+    </article>
+  </div>
+</main>
+
+<footer><div class="wrap"><span>© 2026 ViaZapi</span><span>Política de Privacidade · versão 1.0 · 6 de novembro de 2026</span></div></footer>
+
+</body>
+</html>
